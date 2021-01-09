@@ -1,0 +1,113 @@
+<?php
+
+$hoursWorked = validateInput ($_POST['Hours'], "Hours");
+
+$wages = validateInput($_POST['Wage'], "Wage");
+
+
+
+if ($errorCount>0) {
+
+echo "Please enter the information.<br />\n";
+
+redisplayForm($hoursWorked, $wages);
+
+}
+
+if (is_numeric($hoursWorked) && is_numeric($wages)){
+
+if ($hoursWorked <= 40)
+
+{
+
+$payCheck = ($hoursWorked * $wages);
+
+echo "<h1>Process Paycheck Data</h1><p><strong>$hoursWorked</strong> hours @<strong>$$wages</strong>/hr = <strong>$$payCheck</strong></h1><br /><p><a href='Paycheck.html'>Create another paycheck</a></p>";
+
+}
+
+if ($hoursWorked > 40)
+
+{
+
+$payCheck = (40 * $wages) + (($hoursWorked - 40) * $wages * 1.5);
+
+$temp3=40*$wages;
+
+$temp=$hoursWorked -40;
+
+$temp1=$wages*1.5;
+
+$temp2=(($hoursWorked - 40) * $wages * 1.5);
+
+echo "<h1>Process Paycheck Data</h1><p><strong>40</strong> hours @<strong>$$wages</strong>/hr = <strong>$temp3</strong></h1><p>$temp hours @$temp1/hr = $temp2</p>";
+
+echo "your total for $hoursWorked hours is $payCheck";
+
+echo "<br /><p><a href='Paycheck.html'>Create another paycheck</a></p>";
+
+}
+
+}
+
+else{
+
+echo "<p>Only numbers can be used. Press the back button to try again.</p>";
+
+//displayrequired($fieldName);
+
+//(is_string($hoursWorked) && is_numeric($wages)==0)
+
+//redisplayForm($hourWorked, $wages);
+
+}
+
+function displayRequired($fieldName) {
+
+echo "The field \"$fieldName\" is required to calculate the wages earned.<br />\n";
+
+}
+
+function validateInput($data, $fieldName) {
+
+global $errorCount;
+
+if (empty($data)) {
+
+displayRequired($fieldName);
+
+++$errorCount;
+
+$retval = "";
+
+}
+
+else{
+
+return ($data);
+
+}
+
+}
+
+$errorCount=0;
+
+function redisplayForm($hoursWorked, $wages) {
+
+?>
+
+<form name="paycheck" action="process_Paycheck.php" method="post">
+
+<p>Number of Hours Worked: <input type="text" name="Hours" value="<?php echo $hoursWorked; ?>" /><br />
+
+Hourly Wage: <input type="text" name="Wage" value="<?php echo $wages; ?>"/><br />
+
+<input type="reset" value="Clear Form" />&nbsp;&nbsp;<input type="submit" name="Submit" value="Send Form" />
+
+</form>
+
+<?php
+
+}
+
+?>
