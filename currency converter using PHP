@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>Currency Converter</title>
+
+</head>
+
+<script>
+<!---Hide from older browsers
+
+function convert(){
+
+var usdEle = document.getElementById('usd');
+var usdVal = usdEle.value
+var result = 1.29 * parseFloat(usdVal);
+
+document.getElementById("resultField").value = result.toString();
+}
+//Stop hiding --->
+</script>
+
+</head>
+<body>
+
+<h2 >Currency Converter</h2>
+
+
+
+<form name="glinks">
+<table cellpadding="5">
+<tr>
+<td><label>USD : </label></td>
+<td><input type="text" id="usd"></input></td>
+</tr>
+<tr>
+<td><button type="button" onClick = "convert()">Convert</button></td>
+</tr>
+<tr>
+<td><label>Canadian Dollar : </label></td>
+<td><input type="text" id="resultField"></input></td>
+</tr>
+
+
+
+</table>
+</form>
+</body>
+</html>
