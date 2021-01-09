@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>Nusayba Iftekhar</title>
+</head>
+<body bgcolor = purple>
+<h1><center>Nusayba Iftekhar’s Home Page</center>
+</h1>
+<center><p><img src= “White Lily.jpg” width=”250”
+height=”140”></p></center>
+<hr>
+<h2>Introduction</h2>
+<p>Hello everyone! I am a student at <a href
+=”http://www.rutgers.edu/”>
+<b>ITI-Major</b></a> and this is my <i>Web page</i>
+Favorite ITI courses are:
+<ul>
+<li>Internet information and environment</li>
+<li>Web design</li>
+
+</ul>
+
+<p>Click <a href=”mailto:iftekhar.nusayba@
+rutgers.edu”>here</a> to e-mail me. </p>
+<br>
+
+</body>
+</html>
