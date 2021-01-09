@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>Hours worked for employees</title>
+</head>
+<body>
+<h1>hours worked</h1>
+<script type="text/javascript">
+var name = prompt( 'Enter Name:', '');
+var straightimeworked = 40;
+var overtimehours = 10;
+var hourlywage = '8.25';
+var answer = straightimeworked + overtimehours + hourlywage;
+for(var i=0; i<straightimeworked.length; i++) {
+num = parseInt( prompt( 'how many of item '+(i+1),'0'));
+if(!isNaN(num)) accumulator += items[i]*num;
+}
+{
+num = parseInt( prompt( 'how many regular hours worked this week '+(i+1),'0'));
+num = parseInt( prompt( 'how many overtime hours worked this week '+(i+1),'0'));
+document.write('Thess pay of employee "answer" is: ' + answer + '<br />');
+}
+</script>
+</body>
+</html>
