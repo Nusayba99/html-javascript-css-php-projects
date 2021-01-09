@@ -1,0 +1,35 @@
+<?php
+
+$face1 = 0;
+$face2 = 0;
+$face3 = 0;
+$face4 = 0;
+$face5 = 0;
+$face6 = 0;
+
+for ($count = 1; $count <= 100; $count++){
+$x = rand(1,6);
+if ($x == 1)
+  $face1++;
+  elseif
+  ($x == 2)
+  $face2++;
+  elseif
+  ($x == 3)
+  $face3++;
+  elseif
+  ($x ==4)
+  $face4++;
+  elseif
+  ($x == 5)
+  $face5++;
+  else
+  $face6++;
+  }
+  echo "<p>face1: {$face1}</p>";
+  echo "<p>face2: {$face2}</p>";
+  echo "<p>face3: {$face3}</p>";
+  echo "<p>face4: {$face4}</p>";
+  echo "<p>face5: {$face5}</p>";
+  echo "<p>face6: {$face6}</p>";
+?>
